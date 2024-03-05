@@ -1,57 +1,269 @@
-<!doctype html>
-<html lang="en" class="h-100">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <title>Elizabeth Yuk - Cellist</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
-    
-    <!-- Custom styles for this template -->
-    <link href="./css/cover.css" rel="stylesheet">
-  </head>
-  <body class="d-flex text-center text-white bg-dark">
-    
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <header class="mb-auto">
-        <div>
-          <h3 class="mb-0 text-center">Elizabeth Yuk</h3>
-          <!--
-          <nav class="nav nav-masthead justify-content-center float-md-end">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">About Me</a>
-            <a class="nav-link" href="#">Contact</a>
-          </nav>
-          -->
-        </div>
-      </header>
-
-      <main class="px-3">
-        <img src="./images/elizabeth2.jpg" width="400" />
-        <p class="lead">Elizabeth began her cello studies at age 12 and became actively involved with cello performance by joining the Seattle Youth Symphony Orchestras and later entering in music competitions. She has received numerous prize awards, including First Place in the WA State Youth Music Competition and had the opportunity to solo with the Eastside Symphony Orchestra.</p>
-        <p class="lead">Elizabeth graduated from the University of Washington with a Bachelor of Music in Cello Performance and studied under the tutelage of Toby Saks, Eric Gaenslen, and Sæunn Thorsteinsdóttir. During her studies at the UW, Elizabeth was the recipient of the Delores Gail Plath Music Scholarship. She also served as principal cellist of the UW Symphony Orchestra. Elizabeth is also actively involved in chamber music and has performed in solo master classes with cellists Hans Jorgen Jensen and Ani Kalayjian.</p>
-        <p class="lead">Elizabeth believes music is deeply personal and provides avenues for self-expression. As a teacher, she focuses on building solid technical foundations in her students to help them play challenging pieces as well as encourage creative thinking and performance. </p>
-      </main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spending Personality Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h2 {
+      color: #333;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+    button {
+      padding: 10px;
+      margin-top: 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #results {
+      display: none;
+    }
+    .question {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h2>Spending Personality Quiz</h2>
+  <form id="quizForm">
+    <div class="question" data-question="1">
+      <p>1. Snack Dilemma:</p>
+      <label><input type="radio" name="q1" value="TS"> Resist the temptation and opt for a healthier option</label>
+      <label><input type="radio" name="q1" value="BI"> Consider the nutritional value but might indulge a bit</label>
+      <label><input type="radio" name="q1" value="SS"> Go ahead and grab the snack without much thoughtgc</label>
+      <label><input type="radio" name="q1" value="CP"> Weigh the cost and opt for a budget-friendly snack</label>
     </div>
 
-  </body>
+    <div class="question" data-question="2">
+      <p>2. Unexpected Expenses:</p>
+      <label><input type="radio" name="q2" value="TS"> Dip into your emergency fund without hesitation</label>
+      <label><input type="radio" name="q2" value="CP"> Assess your budget to see where you can adjust</label>
+      <label><input type="radio" name="q2" value="SS"> View it as an opportunity to upgrade your cargc</label>
+      <label><input type="radio" name="q2" value="BI"> Use a combination of savings and adjust your budget</label>
+    </div>
+
+    <div class="question" data-question="3">
+      <p>3. Travel Decisions:</p>
+      <label><input type="radio" name="q3" value="TS"> Decline due to lack of planning and budgeting</label>
+      <label><input type="radio" name="q3" value="CP"> Assess your budget and make a decision based on available funds</label>
+      <label><input type="radio" name="q3" value="SS"> Pack your bags and figure out the details latergc</label>
+      <label><input type="radio" name="q3" value="BI"> Consider the financial implications but may still go for it</label>
+    </div>
+
+    <div class="question" data-question="4">
+      <p>4. Technology Temptation:</p>
+      <label><input type="radio" name="q4" value="TS"> Wait until it's more affordable or there's a sale</label>
+      <label><input type="radio" name="q4" value="BI"> Research and determine if it aligns with your long-term goals</label>
+      <label><input type="radio" name="q4" value="SS"> Purchase it impulsively to have the latest techgc</label>
+      <label><input type="radio" name="q4" value="CP"> Only buy if it fits within your planned budget</label>
+    </div>
+
+    <div class="question" data-question="5">
+      <p>5. Future Planning - Retirement:</p>
+      <label><input type="radio" name="q5" value="CP"> Actively contribute to retirement accounts and monitor investments</label>
+      <label><input type="radio" name="q5" value="BI"> Save consistently but without strict monitoring</label>
+      <label><input type="radio" name="q5" value="SS"> Don't think much about it, retirement is too far awaygc</label>
+      <label><input type="radio" name="q5" value="TS"> Avoid thinking about retirement and focus on current expenses</label>
+    </div>
+
+    <div class="question" data-question="6">
+      <p>6. Clothing Conundrum:</p>
+      <label><input type="radio" name="q6" value="TS"> Resist the urge and stick to your budget</label>
+      <label><input type="radio" name="q6" value="CP"> Consider it but only buy if you find a good deal</label>
+      <label><input type="radio" name="q6" value="SS"> Purchase it impulsively because you love itgc</label>
+      <label><input type="radio" name="q6" value="BI"> Weigh the cost and potential value before deciding</label>
+    </div>
+
+    <div class="question" data-question="7">
+      <p>7. Home Upgrade:</p>
+      <label><input type="radio" name="q7" value="CP"> Save up and make the upgrade when financially ready</label>
+      <label><input type="radio" name="q7" value="BI"> Research options, compare prices, and plan the upgrade</label>
+      <label><input type="radio" name="q7" value="SS"> Make the upgrade impulsively for an immediate improvementgc</label>
+      <label><input type="radio" name="q7" value="TS"> Delay the upgrade unless absolutely necessary</label>
+    </div>
+
+    <div class="question" data-question="8">
+      <p>8. Gift Giving:</p>
+      <label><input type="radio" name="q8" value="CP"> Plan and budget for a thoughtful gift</label>
+      <label><input type="radio" name="q8" value="BI"> Consider the occasion but may not plan extensively</label>
+      <label><input type="radio" name="q8" value="SS"> Buy something spontaneously based on intuitiongc</label>
+      <label><input type="radio" name="q8" value="TS"> Opt for a meaningful yet budget-friendly gift</label>
+    </div>
+
+    <div class="question" data-question="9">
+      <p>9. Investment Opportunity:</p>
+      <label><input type="radio" name="q9" value="CP"> Approach cautiously and seek advice</label>
+      <label><input type="radio" name="q9" value="BI"> Research thoroughly and make an informed decision</label>
+      <label><input type="radio" name="q9" value="SS"> Jump in quickly to seize the opportunitygc</label>
+      <label><input type="radio" name="q9" value="TS"> Avoid investments and focus on saving</label>
+    </div>
+
+    <div class="question" data-question="10">
+      <p>10. Handling Windfalls:</p>
+      <label><input type="radio" name="q10" value="CP"> Save or invest the majority of it</label>
+      <label><input type="radio" name="q10" value="BI"> Allocate it based on both saving and spending priorities</label>
+      <label><input type="radio" name="q10" value="SS"> Treat yourself to a splurge and enjoy the windfallgc</label>
+      <label><input type="radio" name="q10" value="TS"> Save the entire bonus for future goals</label>
+    </div>
+
+    <div class="question" data-question="11">
+      <p>11. Credit Card Usage:</p>
+      <label><input type="radio" name="q11" value="CP"> Pay off the full balance each month</label>
+      <label><input type="radio" name="q11" value="BI"> Carry a balance but manage it responsibly</label>
+      <label><input type="radio" name="q11" value="SS"> Occasionally max out the card due to spontaneous purchasesgc</label>
+      <label><input type="radio" name="q11" value="TS"> Avoid using credit cards as much as possible</label>
+    </div>
+
+    <div class="question" data-question="12">
+      <p>12. Budget Adjustments:</p>
+      <label><input type="radio" name="q12" value="CP"> Adjust other spending categories to accommodate the expense</label>
+      <label><input type="radio" name="q12" value="BI"> Reevaluate your budget and make necessary adjustments</label>
+      <label><input type="radio" name="q12" value="SS"> Continue spending as usual and deal with the consequences latergc</label>
+      <label><input type="radio" name="q12" value="TS"> Try to minimize all expenses until the financial situation stabilizes</label>
+    </div>
+
+    <div class="question" data-question="13">
+      <p>13. Future Planning - Education:</p>
+      <label><input type="radio" name="q13" value="CP"> Plan and contribute regularly to a dedicated education fund</label>
+      <label><input type="radio" name="q13" value="BI"> Save consistently but without a specific education fund</label>
+      <label><input type="radio" name="q13" value="SS"> Focus on current expenses, and education savings can waitgc</label>
+      <label><input type="radio" name="q13" value="TS"> Avoid thinking about education savings altogether</label>
+    </div>
+
+    <div class="question" data-question="14">
+      <p>14. Technology and FOMO:</p>
+      <label><input type="radio" name="q14" value="TS"> Wait until it's more affordable or on sale</label>
+      <label><input type="radio" name="q14" value="CP"> Assess your budget and consider the value it adds to your life</label>
+      <label><input type="radio" name="q14" value="SS"> Purchase it to keep up with trends and your social circlegc</label>
+      <label><input type="radio" name="q14" value="BI"> Only buy if it aligns with your long-term goals and budget</label>
+    </div>
+
+    <div class="question" data-question="15">
+      <p>15. Negotiating a Purchase:</p>
+      <label><input type="radio" name="q15" value="CP"> Always negotiate for the best possible price</label>
+      <label><input type="radio" name="q15" value="BI"> Negotiate if the opportunity arises but not a top priority</label>
+      <label><input type="radio" name="q15" value="SS"> Rarely negotiate and pay the listed pricegc</label>
+      <label><input type="radio" name="q15" value="TS"> Avoid negotiation and either buy or don't buy based on the listed price</label>
+    </div>
+
+    <button id="next" type="button" onclick="nextQuestion()">Next</button>
+    <button id="submit" type="button" onclick="calculateResults()" style="display: none;">Submit</button>
+  </form>
+
+  <div id="results"></div>
+
+  <script>
+    let currentQuestion = 1;
+    let maxQuestion = 15;
+
+	function displayFirstQuestion() {
+	const nextQuestionElement = document.querySelector(`.question[data-question="1"]`);
+		nextQuestionElement.style.display = "block";
+	}
+
+    function nextQuestion() {
+      const currentQuestionElement = document.querySelector(`.question[data-question="${currentQuestion}"]`);
+      currentQuestionElement.style.display = "none";
+      currentQuestion++;
+
+      const nextQuestionElement = document.querySelector(`.question[data-question="${currentQuestion}"]`);
+      if (nextQuestionElement !== null) {
+        nextQuestionElement.style.display = "block";
+      }
+
+	  // All questions answered, show the results button
+      if (currentQuestion >= maxQuestion) {
+        document.querySelector("#next").style.display = "none";
+        document.querySelector("#submit").style.display = "block";
+      }
+    }
+
+    function calculateResults() {
+      const form = document.getElementById("quizForm");
+      const answers = new FormData(form);
+      let personalityCounts = {
+        TS: 0,
+        CP: 0,
+        SS: 0,
+        BI: 0
+      };
+
+      for (const answer of answers.values()) {
+        personalityCounts[answer]++;
+      }
+
+      displayResults(personalityCounts);
+    }
+
+    function displayResults(personalityCounts) {
+      const resultsDiv = document.getElementById("results");
+      let totalResponses = 0;
+
+      for (const count in personalityCounts) {
+        totalResponses += personalityCounts[count];
+      }
+
+      let resultsHTML = "<h2>Results</h2>";
+
+      // Sort the personality types by percentage in descending order
+      const sortedPersonalities = Object.entries(personalityCounts)
+        .sort((a, b) => b[1] - a[1]);
+
+      const [p, c] = sortedPersonalities[0];
+      resultsHTML += `<h2>You are ${getPersonalityTypeName(p)}!</h2>`;
+
+      // Display the results
+      for (const [personality, count] of sortedPersonalities) {
+        const percentage = ((count / totalResponses) * 100).toFixed(2);
+        resultsHTML += `<p>${getPersonalityTypeName(personality)}! (${percentage}%)</p>`;
+      }
+
+      resultsHTML += `<p>The Thrifty Saver</p>`;
+      resultsHTML += `<p>You find joy in saving money and prefer budget-friendly options. Saving for future goals is a top priority.Impulse purchases are rare, and you enjoy finding deals and discounts. You feel a sense of accomplishment when your savings grow.`;
+
+      resultsHTML += `<p>The Careful Planner</p>`;
+      resultsHTML += `<p>Budgeting and planning for expenses are integral to your financial approach. You prioritize financial security and have a well-thought-out savings plan. Large purchases are thoroughly researched and planned in advance. You are cautious about debt and prefer to pay off bills promptly.</p>`;
+
+      resultsHTML += `<p>The Spontaneous Spender</p>`;
+      resultsHTML += `<p>You enjoy the thrill of spontaneous purchases and live in the moment. Saving is important, but not at the expense of missing out on experiences. You are open to trying new products and activities without extensive research. Financial decisions are often influenced by current emotions or trends.</p>`;
+
+      resultsHTML += `<p>The Balanced Investor</p>`;
+      resultsHTML += `<p>You strike a balance between saving and spending, focusing on both short-term and long-term goals. Investments are part of your financial strategy, and you have a diversified portfolio. You are comfortable with calculated risks and see them as opportunities for growth. You enjoy treating yourself occasionally without jeopardizing your financial stability.</p>`;
+
+      resultsDiv.innerHTML = resultsHTML;
+      resultsDiv.style.display = "block";
+    }
+
+    function getPersonalityTypeName(personalityCode) {
+      switch (personalityCode) {
+        case 'TS':
+          return 'The Thrifty Saver';
+        case 'CP':
+          return 'The Careful Planner';
+        case 'SS':
+          return 'The Spontaneous Spender';
+        case 'BI':
+          return 'The Balanced Investor';
+        default:
+          return '';
+      }
+    }
+
+    displayFirstQuestion();
+  </script>
+</body>
 </html>
+
